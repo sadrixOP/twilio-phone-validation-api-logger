@@ -1,0 +1,251 @@
+batch_seq,account_id,country_code,phone_number_input,normalized_e164,e164_valid,http_status_code,twilio_error_code,error_message,carrier_name,line_type,mcc,mnc,api_endpoint,latency_ms,recommended_ops_action,checked_at_utc
+REQ-0001,ACC-102,AU,+61961103828,+61961103828,True,200,,,Optus Mobile,mobile,505,02,GET /v2/PhoneNumbers,216.2,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0002,ACC-103,AU,+61634067535,+61634067535,True,200,,,Telstra Corp,mobile,505,01,GET /v2/PhoneNumbers,180.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0003,ACC-104,IN,8991037207,,False,400,21211,The 'To' number '8991037207' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,67.2,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0004,ACC-105,IN,+917631397367,+917631397367,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers,247.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0005,ACC-106,AU,+61952278036,+61952278036,True,200,,,Telstra Corp,mobile,505,01,GET /v2/PhoneNumbers + POST /Messages.json,270.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0006,ACC-107,IN,+917735979539,+917735979539,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers,218.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0007,ACC-108,US,+16600544255,+16600544255,False,429,20429,Too Many Requests: Lookup API concurrency quota exceeded.,,,,,GET /v2/PhoneNumbers,40.5,Apply Exponential Backoff & Queue Retry,2026-11-17T06:12:32Z
+REQ-0008,ACC-109,SG,6915-INVALID-934,,False,400,21211,The 'To' number '6915-INVALID-934' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,107.8,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0009,ACC-110,GB,+446529083813,+446529083813,True,200,,,EE Limited,mobile,234,30,GET /v2/PhoneNumbers,273.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0010,ACC-111,US,+18730303725,+18730303725,True,200,,,Verizon Wireless,mobile,311,480,GET /v2/PhoneNumbers + POST /Messages.json,239.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0011,ACC-112,IN,+916149348995,+916149348995,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers,190.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0012,ACC-101,IN,+918045281164,+918045281164,False,429,20429,Too Many Requests: Lookup API concurrency quota exceeded.,,,,,GET /v2/PhoneNumbers,62.7,Apply Exponential Backoff & Queue Retry,2026-11-17T06:12:32Z
+REQ-0013,ACC-102,IN,+917657686793,+917657686793,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers,154.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0014,ACC-103,IN,+919462525076,+919462525076,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,142.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0015,ACC-104,US,+16950837920,+16950837920,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers + POST /Messages.json,192.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0016,ACC-105,SG,+6582706383,+6582706383,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers,173.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0017,ACC-106,IN,+916561401255,+916561401255,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,87.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0018,ACC-107,US,+17321507495,+17321507495,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,176.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0019,ACC-108,US,6611648046,,False,400,21211,The 'To' number '6611648046' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,66.8,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0020,ACC-109,SG,+6588884725,+6588884725,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers + POST /Messages.json,206.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0021,ACC-110,US,+17289069510,+17289069510,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers,174.2,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0022,ACC-111,US,+16722594262,+16722594262,False,500,30008,Unknown error / Upstream carrier HLR lookup timeout.,,,,,GET /v2/PhoneNumbers,1253.7,Escalate to Carrier Partner / Trigger Fallback Route,2026-11-17T06:12:32Z
+REQ-0023,ACC-112,SG,+6583469826,+6583469826,True,200,,,StarHub Ltd,mobile,525,05,GET /v2/PhoneNumbers,248.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0024,ACC-101,IN,+919347359612,+919347359612,True,200,,,BSNL Landline,landline,,,GET /v2/PhoneNumbers,209.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0025,ACC-102,SG,+6577005282,+6577005282,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers + POST /Messages.json,279.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0026,ACC-103,GB,+449763681062,+449763681062,True,200,,,Vodafone UK,mobile,234,15,GET /v2/PhoneNumbers,200.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0027,ACC-104,IN,+910000391706,+910000391706,False,404,20404,The requested resource /v2/PhoneNumbers/+910000391706 was not found.,,,,,GET /v2/PhoneNumbers,99.6,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0028,ACC-105,US,+19501526585,+19501526585,True,200,,,T-Mobile USA,mobile,310,260,GET /v2/PhoneNumbers,150.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0029,ACC-106,US,+19955353344,+19955353344,True,200,,,Twilio Toll-Free,tollFree,,,GET /v2/PhoneNumbers,227.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0030,ACC-107,SG,+6572682229,+6572682229,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers + POST /Messages.json,138.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0031,ACC-108,SG,+6500002907,+6500002907,False,404,20404,The requested resource /v2/PhoneNumbers/+6500002907 was not found.,,,,,GET /v2/PhoneNumbers,121.1,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0032,ACC-109,US,+19006023343,+19006023343,True,200,,,Verizon Wireless,mobile,311,480,GET /v2/PhoneNumbers,131.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0033,ACC-110,IN,+917995736159,+917995736159,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers,203.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0034,ACC-111,IN,+910000208754,+910000208754,False,404,20404,The requested resource /v2/PhoneNumbers/+910000208754 was not found.,,,,,GET /v2/PhoneNumbers,80.1,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0035,ACC-112,US,+18809056503,+18809056503,True,200,,,T-Mobile USA,mobile,310,260,GET /v2/PhoneNumbers + POST /Messages.json,234.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0036,ACC-101,IN,6563-INVALID-937,,False,400,21211,The 'To' number '6563-INVALID-937' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,79.3,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0037,ACC-102,IN,+917820447036,+917820447036,False,500,30008,Unknown error / Upstream carrier HLR lookup timeout.,,,,,GET /v2/PhoneNumbers,1489.6,Escalate to Carrier Partner / Trigger Fallback Route,2026-11-17T06:12:32Z
+REQ-0038,ACC-103,US,+18179114659,+18179114659,True,200,,,Verizon Wireless,mobile,311,480,GET /v2/PhoneNumbers,186.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0039,ACC-104,IN,+910000225887,+910000225887,False,404,20404,The requested resource /v2/PhoneNumbers/+910000225887 was not found.,,,,,GET /v2/PhoneNumbers,102.6,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0040,ACC-105,SG,+6586148356,+6586148356,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers + POST /Messages.json,223.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0041,ACC-106,AU,+61690998793,+61690998793,True,200,,,Optus Mobile,mobile,505,02,GET /v2/PhoneNumbers,170.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0042,ACC-107,SG,+6582948189,+6582948189,False,429,20429,Too Many Requests: Lookup API concurrency quota exceeded.,,,,,GET /v2/PhoneNumbers,28.1,Apply Exponential Backoff & Queue Retry,2026-11-17T06:12:32Z
+REQ-0043,ACC-108,GB,+449457617374,+449457617374,True,200,,,Vodafone UK,mobile,234,15,GET /v2/PhoneNumbers,247.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0044,ACC-109,IN,6818-INVALID-587,,False,400,21211,The 'To' number '6818-INVALID-587' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,77.3,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0045,ACC-110,GB,+447866716904,+447866716904,True,200,,,BT Landline,landline,,,GET /v2/PhoneNumbers + POST /Messages.json,187.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0046,ACC-111,SG,9333-INVALID-742,,False,400,21211,The 'To' number '9333-INVALID-742' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,48.4,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0047,ACC-112,IN,9134698643,,False,400,21211,The 'To' number '9134698643' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,103.5,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0048,ACC-101,AU,+61793661753,+61793661753,True,200,,,Telstra Corp,mobile,505,01,GET /v2/PhoneNumbers,287.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0049,ACC-102,IN,8716043654,,False,400,21211,The 'To' number '8716043654' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,46.0,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0050,ACC-103,AU,+61927780434,+61927780434,True,200,,,Telstra Corp,mobile,505,01,GET /v2/PhoneNumbers + POST /Messages.json,234.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0051,ACC-104,IN,7327449465,,False,400,21211,The 'To' number '7327449465' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,63.4,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0052,ACC-105,AU,+61975793372,+61975793372,False,429,20429,Too Many Requests: Lookup API concurrency quota exceeded.,,,,,GET /v2/PhoneNumbers,51.8,Apply Exponential Backoff & Queue Retry,2026-11-17T06:12:32Z
+REQ-0053,ACC-106,IN,+918004571676,+918004571676,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,170.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0054,ACC-107,US,7350-INVALID-877,,False,400,21211,The 'To' number '7350-INVALID-877' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,94.6,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0055,ACC-108,IN,+917675712733,+917675712733,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers + POST /Messages.json,267.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0056,ACC-109,SG,+6586066508,+6586066508,True,200,,,StarHub Ltd,mobile,525,05,GET /v2/PhoneNumbers,212.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0057,ACC-110,IN,+916149568945,+916149568945,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,279.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0058,ACC-111,IN,+917309869128,+917309869128,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,89.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0059,ACC-112,IN,+918241708174,+918241708174,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,142.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0060,ACC-101,IN,+917904309776,+917904309776,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers + POST /Messages.json,222.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0061,ACC-102,IN,+918769273252,+918769273252,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,104.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0062,ACC-103,AU,+61832002056,+61832002056,True,200,,,Telstra Corp,mobile,505,01,GET /v2/PhoneNumbers,87.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0063,ACC-104,IN,+918843944737,+918843944737,True,200,,,BSNL Landline,landline,,,GET /v2/PhoneNumbers,185.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0064,ACC-105,IN,+917237502364,+917237502364,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers,208.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0065,ACC-106,IN,+918434078658,+918434078658,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers + POST /Messages.json,267.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0066,ACC-107,AU,+61645206329,+61645206329,True,200,,,Optus Mobile,mobile,505,02,GET /v2/PhoneNumbers,273.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0067,ACC-108,SG,+6570904948,+6570904948,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers,278.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0068,ACC-109,IN,+917006883967,+917006883967,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,246.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0069,ACC-110,GB,+449086971658,+449086971658,True,200,,,Vodafone UK,mobile,234,15,GET /v2/PhoneNumbers,220.2,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0070,ACC-111,GB,+449997492044,+449997492044,True,200,,,Vodafone UK,mobile,234,15,GET /v2/PhoneNumbers + POST /Messages.json,196.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0071,ACC-112,IN,8129292648,,False,400,21211,The 'To' number '8129292648' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,104.4,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0072,ACC-101,US,+16735292692,+16735292692,True,200,,,Twilio Toll-Free,tollFree,,,GET /v2/PhoneNumbers,207.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0073,ACC-102,US,6388901669,,False,400,21211,The 'To' number '6388901669' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,97.4,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0074,ACC-103,US,+19707174283,+19707174283,True,200,,,Verizon Wireless,mobile,311,480,GET /v2/PhoneNumbers,112.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0075,ACC-104,IN,+917493222152,+917493222152,True,200,,,BSNL Landline,landline,,,GET /v2/PhoneNumbers + POST /Messages.json,167.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0076,ACC-105,GB,+449619525023,+449619525023,True,200,,,Vodafone UK,mobile,234,15,GET /v2/PhoneNumbers,242.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0077,ACC-106,GB,+446911873769,+446911873769,True,200,,,Vodafone UK,mobile,234,15,GET /v2/PhoneNumbers,209.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0078,ACC-107,US,+17620118543,+17620118543,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers,260.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0079,ACC-108,SG,+6500005944,+6500005944,False,404,20404,The requested resource /v2/PhoneNumbers/+6500005944 was not found.,,,,,GET /v2/PhoneNumbers,115.3,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0080,ACC-109,US,+19836612689,+19836612689,True,200,,,Twilio Toll-Free,tollFree,,,GET /v2/PhoneNumbers + POST /Messages.json,219.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0081,ACC-110,US,+18950365728,+18950365728,True,200,,,Verizon Wireless,mobile,311,480,GET /v2/PhoneNumbers,154.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0082,ACC-111,IN,+919692474865,+919692474865,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers,111.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0083,ACC-112,US,+17404274632,+17404274632,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,142.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0084,ACC-101,GB,+446156621116,+446156621116,True,200,,,Vodafone UK,mobile,234,15,GET /v2/PhoneNumbers,102.2,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0085,ACC-102,SG,+6567537269,+6567537269,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers + POST /Messages.json,198.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0086,ACC-103,SG,+6580314226,+6580314226,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers,190.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0087,ACC-104,IN,+919956982690,+919956982690,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,220.2,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0088,ACC-105,IN,+916124330715,+916124330715,True,200,,,BSNL Landline,landline,,,GET /v2/PhoneNumbers,157.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0089,ACC-106,US,+19418376541,+19418376541,True,200,,,Twilio Toll-Free,tollFree,,,GET /v2/PhoneNumbers,150.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0090,ACC-107,IN,+916807012722,+916807012722,True,200,,,BSNL Landline,landline,,,GET /v2/PhoneNumbers + POST /Messages.json,109.2,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0091,ACC-108,US,7068548879,,False,400,21211,The 'To' number '7068548879' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,87.1,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0092,ACC-109,US,+18351585870,+18351585870,True,200,,,Verizon Wireless,mobile,311,480,GET /v2/PhoneNumbers,253.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0093,ACC-110,AU,+61822986818,+61822986818,True,200,,,Telstra Corp,mobile,505,01,GET /v2/PhoneNumbers,199.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0094,ACC-111,IN,+918895446998,+918895446998,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,281.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0095,ACC-112,IN,+917357619383,+917357619383,True,200,,,BSNL Landline,landline,,,GET /v2/PhoneNumbers + POST /Messages.json,237.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0096,ACC-101,US,+18452358124,+18452358124,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,267.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0097,ACC-102,GB,9967346514,,False,400,21211,The 'To' number '9967346514' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,56.7,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0098,ACC-103,IN,+919957561838,+919957561838,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,232.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0099,ACC-104,US,+17461489921,+17461489921,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,257.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0100,ACC-105,IN,8550-INVALID-346,,False,400,21211,The 'To' number '8550-INVALID-346' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers + POST /Messages.json,65.4,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0101,ACC-106,IN,+917088288876,+917088288876,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers,208.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0102,ACC-107,US,+17661950382,+17661950382,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,168.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0103,ACC-108,IN,+916903212799,+916903212799,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,157.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0104,ACC-109,US,+19470026812,+19470026812,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers,282.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0105,ACC-110,SG,+6572498168,+6572498168,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers + POST /Messages.json,108.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0106,ACC-111,AU,+61653882593,+61653882593,True,200,,,Telstra Corp,mobile,505,01,GET /v2/PhoneNumbers,160.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0107,ACC-112,IN,7272324991,,False,400,21211,The 'To' number '7272324991' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,48.9,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0108,ACC-101,GB,+449955224043,+449955224043,True,200,,,BT Landline,landline,,,GET /v2/PhoneNumbers,272.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0109,ACC-102,AU,+61856764435,+61856764435,True,200,,,Telstra Corp,mobile,505,01,GET /v2/PhoneNumbers,150.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0110,ACC-103,US,+19339601037,+19339601037,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers + POST /Messages.json,133.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0111,ACC-104,SG,+6592156602,+6592156602,True,200,,,StarHub Ltd,mobile,525,05,GET /v2/PhoneNumbers,221.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0112,ACC-105,GB,+446148875846,+446148875846,True,200,,,EE Limited,mobile,234,30,GET /v2/PhoneNumbers,246.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0113,ACC-106,GB,9822664636,,False,400,21211,The 'To' number '9822664636' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,70.8,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0114,ACC-107,IN,+919665212007,+919665212007,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,122.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0115,ACC-108,IN,+910000678095,+910000678095,False,404,20404,The requested resource /v2/PhoneNumbers/+910000678095 was not found.,,,,,GET /v2/PhoneNumbers + POST /Messages.json,125.7,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0116,ACC-109,US,+10000111025,+10000111025,False,404,20404,The requested resource /v2/PhoneNumbers/+10000111025 was not found.,,,,,GET /v2/PhoneNumbers,109.3,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0117,ACC-110,SG,+6592804357,+6592804357,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers,134.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0118,ACC-111,SG,+6570514359,+6570514359,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers,245.2,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0119,ACC-112,AU,+61000001654,+61000001654,False,404,20404,The requested resource /v2/PhoneNumbers/+61000001654 was not found.,,,,,GET /v2/PhoneNumbers,94.2,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0120,ACC-101,IN,+919499426645,+919499426645,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers + POST /Messages.json,282.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0121,ACC-102,US,+18545210679,+18545210679,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers,91.2,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0122,ACC-103,US,+18697607071,+18697607071,True,200,,,T-Mobile USA,mobile,310,260,GET /v2/PhoneNumbers,180.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0123,ACC-104,SG,+6573883285,+6573883285,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers,127.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0124,ACC-105,IN,+918858545259,+918858545259,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,201.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0125,ACC-106,SG,+6575650408,+6575650408,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers + POST /Messages.json,281.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0126,ACC-107,IN,+917581611204,+917581611204,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,100.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0127,ACC-108,GB,+449149879572,+449149879572,True,200,,,BT Landline,landline,,,GET /v2/PhoneNumbers,259.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0128,ACC-109,IN,+917444920271,+917444920271,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,251.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0129,ACC-110,IN,+917512201534,+917512201534,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,145.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0130,ACC-111,IN,+918280530745,+918280530745,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers + POST /Messages.json,232.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0131,ACC-112,US,+18464249035,+18464249035,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,259.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0132,ACC-101,SG,+6568242583,+6568242583,False,429,20429,Too Many Requests: Lookup API concurrency quota exceeded.,,,,,GET /v2/PhoneNumbers,69.1,Apply Exponential Backoff & Queue Retry,2026-11-17T06:12:32Z
+REQ-0133,ACC-102,IN,+916318336695,+916318336695,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers,213.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0134,ACC-103,US,6773-INVALID-933,,False,400,21211,The 'To' number '6773-INVALID-933' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,92.3,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0135,ACC-104,US,+17572263945,+17572263945,True,200,,,Verizon Wireless,mobile,311,480,GET /v2/PhoneNumbers + POST /Messages.json,101.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0136,ACC-105,IN,+917110375189,+917110375189,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,150.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0137,ACC-106,US,+17499439465,+17499439465,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,118.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0138,ACC-107,SG,+6500001924,+6500001924,False,404,20404,The requested resource /v2/PhoneNumbers/+6500001924 was not found.,,,,,GET /v2/PhoneNumbers,109.0,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0139,ACC-108,IN,+919677496124,+919677496124,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,203.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0140,ACC-109,GB,+449653520361,+449653520361,True,200,,,Vodafone UK,mobile,234,15,GET /v2/PhoneNumbers + POST /Messages.json,216.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0141,ACC-110,US,+17073935546,+17073935546,False,500,30008,Unknown error / Upstream carrier HLR lookup timeout.,,,,,GET /v2/PhoneNumbers,2262.5,Escalate to Carrier Partner / Trigger Fallback Route,2026-11-17T06:12:32Z
+REQ-0142,ACC-111,GB,+446540728839,+446540728839,True,200,,,Vodafone UK,mobile,234,15,GET /v2/PhoneNumbers,144.2,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0143,ACC-112,AU,832586824,,False,400,21211,The 'To' number '832586824' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,66.2,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0144,ACC-101,IN,+916542096801,+916542096801,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,243.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0145,ACC-102,GB,+448693169122,+448693169122,True,200,,,BT Landline,landline,,,GET /v2/PhoneNumbers + POST /Messages.json,127.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0146,ACC-103,US,+19740470015,+19740470015,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,237.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0147,ACC-104,IN,+919563874318,+919563874318,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,242.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0148,ACC-105,SG,+6561973490,+6561973490,True,200,,,StarHub Ltd,mobile,525,05,GET /v2/PhoneNumbers,101.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0149,ACC-106,IN,+919448216242,+919448216242,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,268.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0150,ACC-107,GB,+449723279656,+449723279656,True,200,,,EE Limited,mobile,234,30,GET /v2/PhoneNumbers + POST /Messages.json,265.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0151,ACC-108,IN,+917218426794,+917218426794,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,198.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0152,ACC-109,IN,+916054302946,+916054302946,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,138.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0153,ACC-110,GB,+449269531862,+449269531862,False,429,20429,Too Many Requests: Lookup API concurrency quota exceeded.,,,,,GET /v2/PhoneNumbers,45.5,Apply Exponential Backoff & Queue Retry,2026-11-17T06:12:32Z
+REQ-0154,ACC-111,US,+19284055010,+19284055010,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,142.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0155,ACC-112,US,+18640994496,+18640994496,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers + POST /Messages.json,140.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0156,ACC-101,IN,+918098086071,+918098086071,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,205.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0157,ACC-102,US,+17970351184,+17970351184,True,200,,,Twilio Toll-Free,tollFree,,,GET /v2/PhoneNumbers,121.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0158,ACC-103,US,+19766649604,+19766649604,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers,186.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0159,ACC-104,US,+17605556669,+17605556669,True,200,,,T-Mobile USA,mobile,310,260,GET /v2/PhoneNumbers,215.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0160,ACC-105,US,9272-INVALID-397,,False,400,21211,The 'To' number '9272-INVALID-397' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers + POST /Messages.json,78.2,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0161,ACC-106,GB,+440000691731,+440000691731,False,404,20404,The requested resource /v2/PhoneNumbers/+440000691731 was not found.,,,,,GET /v2/PhoneNumbers,98.7,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0162,ACC-107,IN,+917976162269,+917976162269,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,202.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0163,ACC-108,GB,+447951207940,+447951207940,True,200,,,EE Limited,mobile,234,30,GET /v2/PhoneNumbers,285.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0164,ACC-109,SG,+6588512487,+6588512487,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers,266.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0165,ACC-110,IN,+918887654284,+918887654284,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers + POST /Messages.json,88.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0166,ACC-111,IN,+918032688219,+918032688219,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,262.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0167,ACC-112,IN,+916399926607,+916399926607,True,200,,,Bharti Airtel Ltd,mobile,404,10,GET /v2/PhoneNumbers,201.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0168,ACC-101,US,+19077403556,+19077403556,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,160.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0169,ACC-102,US,+16737737813,+16737737813,True,200,,,T-Mobile USA,mobile,310,260,GET /v2/PhoneNumbers,145.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0170,ACC-103,IN,+919043260601,+919043260601,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers + POST /Messages.json,160.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0171,ACC-104,IN,+917255854414,+917255854414,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers,174.2,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0172,ACC-105,AU,+61959325412,+61959325412,True,200,,,Optus Mobile,mobile,505,02,GET /v2/PhoneNumbers,279.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0173,ACC-106,US,+17042557850,+17042557850,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,288.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0174,ACC-107,GB,+449558495627,+449558495627,True,200,,,EE Limited,mobile,234,30,GET /v2/PhoneNumbers,113.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0175,ACC-108,IN,+918804382219,+918804382219,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers + POST /Messages.json,90.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0176,ACC-109,SG,+6587486708,+6587486708,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers,100.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0177,ACC-110,IN,+910000884236,+910000884236,False,404,20404,The requested resource /v2/PhoneNumbers/+910000884236 was not found.,,,,,GET /v2/PhoneNumbers,74.4,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0178,ACC-111,GB,+440000621368,+440000621368,False,404,20404,The requested resource /v2/PhoneNumbers/+440000621368 was not found.,,,,,GET /v2/PhoneNumbers,83.8,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0179,ACC-112,SG,+6563032500,+6563032500,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers,288.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0180,ACC-101,GB,+447248295229,+447248295229,True,200,,,EE Limited,mobile,234,30,GET /v2/PhoneNumbers + POST /Messages.json,107.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0181,ACC-102,IN,9367996065,,False,400,21211,The 'To' number '9367996065' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,104.3,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0182,ACC-103,US,+17363364521,+17363364521,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers,212.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0183,ACC-104,IN,+919577431407,+919577431407,True,200,,,BSNL Landline,landline,,,GET /v2/PhoneNumbers,157.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0184,ACC-105,US,6854-INVALID-715,,False,400,21211,The 'To' number '6854-INVALID-715' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,105.5,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0185,ACC-106,IN,+918208031676,+918208031676,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers + POST /Messages.json,285.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0186,ACC-107,IN,+919192968036,+919192968036,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,287.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0187,ACC-108,GB,+447272506074,+447272506074,True,200,,,Vodafone UK,mobile,234,15,GET /v2/PhoneNumbers,188.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0188,ACC-109,US,+16202883070,+16202883070,True,200,,,Verizon Wireless,mobile,311,480,GET /v2/PhoneNumbers,246.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0189,ACC-110,US,7444896164,,False,400,21211,The 'To' number '7444896164' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,85.8,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0190,ACC-111,SG,+6581514081,+6581514081,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers + POST /Messages.json,126.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0191,ACC-112,SG,+6577894157,+6577894157,True,200,,,StarHub Ltd,mobile,525,05,GET /v2/PhoneNumbers,88.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0192,ACC-101,SG,+6579068762,+6579068762,True,200,,,StarHub Ltd,mobile,525,05,GET /v2/PhoneNumbers,264.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0193,ACC-102,US,+17515025723,+17515025723,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers,94.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0194,ACC-103,IN,+910000721767,+910000721767,False,404,20404,The requested resource /v2/PhoneNumbers/+910000721767 was not found.,,,,,GET /v2/PhoneNumbers,140.0,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0195,ACC-104,US,+17009191726,+17009191726,True,200,,,T-Mobile USA,mobile,310,260,GET /v2/PhoneNumbers + POST /Messages.json,289.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0196,ACC-105,US,+19518630612,+19518630612,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,173.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0197,ACC-106,SG,+6500004209,+6500004209,False,404,20404,The requested resource /v2/PhoneNumbers/+6500004209 was not found.,,,,,GET /v2/PhoneNumbers,112.3,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0198,ACC-107,IN,+919191963293,+919191963293,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers,87.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0199,ACC-108,US,+18282755612,+18282755612,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,152.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0200,ACC-109,US,+19912946303,+19912946303,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers + POST /Messages.json,169.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0201,ACC-110,IN,+919123665288,+919123665288,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,120.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0202,ACC-111,US,+10000523355,+10000523355,False,404,20404,The requested resource /v2/PhoneNumbers/+10000523355 was not found.,,,,,GET /v2/PhoneNumbers,74.3,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0203,ACC-112,IN,+916458537631,+916458537631,True,200,,,BSNL Landline,landline,,,GET /v2/PhoneNumbers,228.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0204,ACC-101,US,+17765404761,+17765404761,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers,265.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0205,ACC-102,GB,+446961651060,+446961651060,True,200,,,BT Landline,landline,,,GET /v2/PhoneNumbers + POST /Messages.json,237.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0206,ACC-103,US,+16377755081,+16377755081,True,200,,,Verizon Wireless,mobile,311,480,GET /v2/PhoneNumbers,192.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0207,ACC-104,US,+17607854870,+17607854870,True,200,,,Twilio Toll-Free,tollFree,,,GET /v2/PhoneNumbers,243.8,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0208,ACC-105,US,+19202371793,+19202371793,True,200,,,Verizon Wireless,mobile,311,480,GET /v2/PhoneNumbers,157.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0209,ACC-106,IN,+917463697377,+917463697377,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,271.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0210,ACC-107,AU,+61000019398,+61000019398,False,404,20404,The requested resource /v2/PhoneNumbers/+61000019398 was not found.,,,,,GET /v2/PhoneNumbers + POST /Messages.json,99.5,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0211,ACC-108,US,+16783391533,+16783391533,True,200,,,AT&T Wireless,mobile,310,410,GET /v2/PhoneNumbers,186.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0212,ACC-109,AU,6347-INVALID-781,,False,400,21211,The 'To' number '6347-INVALID-781' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,49.6,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0213,ACC-110,IN,+918945362645,+918945362645,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers,111.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0214,ACC-111,GB,+447806031235,+447806031235,True,200,,,EE Limited,mobile,234,30,GET /v2/PhoneNumbers,230.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0215,ACC-112,IN,+917982073002,+917982073002,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers + POST /Messages.json,237.2,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0216,ACC-101,US,+18976697127,+18976697127,True,200,,,T-Mobile USA,mobile,310,260,GET /v2/PhoneNumbers,86.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0217,ACC-102,US,+18175258695,+18175258695,True,200,,,Verizon Wireless,mobile,311,480,GET /v2/PhoneNumbers,194.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0218,ACC-103,IN,+916713059172,+916713059172,True,200,,,Reliance Jio Infocomm,mobile,405,854,GET /v2/PhoneNumbers,150.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0219,ACC-104,IN,8470535994,,False,400,21211,The 'To' number '8470535994' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,80.5,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0220,ACC-105,AU,8403-INVALID-295,,False,400,21211,The 'To' number '8403-INVALID-295' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers + POST /Messages.json,68.6,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0221,ACC-106,SG,+6563897909,+6563897909,True,200,,,Singtel Mobile,mobile,525,01,GET /v2/PhoneNumbers,179.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0222,ACC-107,AU,6011-INVALID-927,,False,400,21211,The 'To' number '6011-INVALID-927' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,45.4,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0223,ACC-108,IN,9750719368,,False,400,21211,The 'To' number '9750719368' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,54.4,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0224,ACC-109,US,+16626327759,+16626327759,True,200,,,Twilio Toll-Free,tollFree,,,GET /v2/PhoneNumbers,189.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0225,ACC-110,IN,+918564484046,+918564484046,True,200,,,BSNL Landline,landline,,,GET /v2/PhoneNumbers + POST /Messages.json,266.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0226,ACC-111,US,+19606821921,+19606821921,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,124.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0227,ACC-112,GB,+448232071449,+448232071449,False,429,20429,Too Many Requests: Lookup API concurrency quota exceeded.,,,,,GET /v2/PhoneNumbers,44.8,Apply Exponential Backoff & Queue Retry,2026-11-17T06:12:32Z
+REQ-0228,ACC-101,SG,+6581653486,+6581653486,False,500,30008,Unknown error / Upstream carrier HLR lookup timeout.,,,,,GET /v2/PhoneNumbers,1091.4,Escalate to Carrier Partner / Trigger Fallback Route,2026-11-17T06:12:32Z
+REQ-0229,ACC-102,US,+16385295352,+16385295352,True,200,,,Twilio Toll-Free,tollFree,,,GET /v2/PhoneNumbers,102.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0230,ACC-103,US,+16028779234,+16028779234,True,200,,,Verizon Wireless,mobile,311,480,GET /v2/PhoneNumbers + POST /Messages.json,254.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0231,ACC-104,AU,+61771200792,+61771200792,False,500,30008,Unknown error / Upstream carrier HLR lookup timeout.,,,,,GET /v2/PhoneNumbers,1974.5,Escalate to Carrier Partner / Trigger Fallback Route,2026-11-17T06:12:32Z
+REQ-0232,ACC-105,GB,9058-INVALID-114,,False,400,21211,The 'To' number '9058-INVALID-114' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,77.2,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0233,ACC-106,IN,+919887997830,+919887997830,True,200,,,BSNL Landline,landline,,,GET /v2/PhoneNumbers,238.3,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0234,ACC-107,US,6596-INVALID-421,,False,400,21211,The 'To' number '6596-INVALID-421' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,63.4,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0235,ACC-108,IN,+916633127382,+916633127382,True,200,,,Vodafone Idea Ltd,mobile,404,20,GET /v2/PhoneNumbers + POST /Messages.json,268.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0236,ACC-109,SG,9324-INVALID-054,,False,400,21211,The 'To' number '9324-INVALID-054' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,97.5,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0237,ACC-110,AU,+61913327899,+61913327899,True,200,,,Telstra Corp,mobile,505,01,GET /v2/PhoneNumbers,148.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0238,ACC-111,GB,+447753216632,+447753216632,True,200,,,BT Landline,landline,,,GET /v2/PhoneNumbers,166.7,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0239,ACC-112,GB,+449319448961,+449319448961,True,200,,,BT Landline,landline,,,GET /v2/PhoneNumbers,224.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0240,ACC-101,US,7830-INVALID-604,,False,400,21211,The 'To' number '7830-INVALID-604' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers + POST /Messages.json,90.4,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0241,ACC-102,IN,+918909818449,+918909818449,True,200,,,BSNL Landline,landline,,,GET /v2/PhoneNumbers,254.6,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0242,ACC-103,US,+19922875746,+19922875746,True,200,,,T-Mobile USA,mobile,310,260,GET /v2/PhoneNumbers,180.4,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0243,ACC-104,GB,+449563049081,+449563049081,True,200,,,BT Landline,landline,,,GET /v2/PhoneNumbers,277.0,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0244,ACC-105,AU,9002-INVALID-666,,False,400,21211,The 'To' number '9002-INVALID-666' is not a valid E.164 phone number.,,,,,GET /v2/PhoneNumbers,103.2,Reject & Request Customer E.164 Format Correction,2026-11-17T06:12:32Z
+REQ-0245,ACC-106,US,+10000925076,+10000925076,False,404,20404,The requested resource /v2/PhoneNumbers/+10000925076 was not found.,,,,,GET /v2/PhoneNumbers + POST /Messages.json,137.7,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0246,ACC-107,US,+18446233101,+18446233101,True,200,,,Twilio Toll-Free,tollFree,,,GET /v2/PhoneNumbers,115.1,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0247,ACC-108,GB,+449634603029,+449634603029,True,200,,,EE Limited,mobile,234,30,GET /v2/PhoneNumbers,236.9,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0248,ACC-109,AU,+61000090035,+61000090035,False,404,20404,The requested resource /v2/PhoneNumbers/+61000090035 was not found.,,,,,GET /v2/PhoneNumbers,107.3,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z
+REQ-0249,ACC-110,US,+16276283418,+16276283418,True,200,,,Bandwidth.com VoIP,voip,,,GET /v2/PhoneNumbers,193.5,Provision / Route via Primary Carrier,2026-11-17T06:12:32Z
+REQ-0250,ACC-111,SG,+6500009186,+6500009186,False,404,20404,The requested resource /v2/PhoneNumbers/+6500009186 was not found.,,,,,GET /v2/PhoneNumbers + POST /Messages.json,81.1,Quarantine Unallocated Number & Verify LNP Status,2026-11-17T06:12:32Z

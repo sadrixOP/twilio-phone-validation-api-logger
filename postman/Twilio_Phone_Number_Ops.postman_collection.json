@@ -1,0 +1,212 @@
+{
+  "info": {
+    "_postman_id": "c7b8f9c2-7c21-4f4b-8895-3e8a1b54f201",
+    "name": "Twilio Phone Number Ops & Lookup APIs",
+    "description": "Postman collection for validating phone numbers (Lookup v2), sending SMS via Sender IDs/Short Codes, auditing IncomingPhoneNumbers, and troubleshooting carrier/HTTP error logs (200, 400, 404, 429, 500).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "basic",
+    "basic": [
+      { "key": "username", "value": "{{TWILIO_ACCOUNT_SID}}", "type": "string" },
+      { "key": "password", "value": "{{TWILIO_AUTH_TOKEN}}", "type": "string" }
+    ]
+  },
+  "item": [
+    {
+      "name": "1. Lookup v2 - Validate E.164 & Line Type Intelligence (200 OK)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Response contains valid E.164 phone_number and line_type_intelligence', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData.valid).to.eql(true);",
+              "    pm.expect(jsonData).to.have.property('phone_number');",
+              "    pm.expect(jsonData).to.have.property('line_type_intelligence');",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "https://lookups.twilio.com/v2/PhoneNumbers/{{TEST_VALID_E164}}?Fields=line_type_intelligence,caller_name",
+          "protocol": "https",
+          "host": ["lookups", "twilio", "com"],
+          "path": ["v2", "PhoneNumbers", "{{TEST_VALID_E164}}"],
+          "query": [
+            { "key": "Fields", "value": "line_type_intelligence,caller_name" }
+          ]
+        },
+        "description": "Fetches carrier name, MCC/MNC codes, and line type (mobile/voip/landline/tollFree) using Twilio Lookup v2."
+      }
+    },
+    {
+      "name": "2. Lookup v2 - Malformed Phone Number Error Check (400 / 404)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Returns 400 Bad Request or 404 Not Found for malformed/unallocated number', function () {",
+              "    pm.expect(pm.response.code).to.be.oneOf([400, 404]);",
+              "});",
+              "pm.test('Twilio JSON error payload contains code and message', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData).to.have.property('message');",
+              "    pm.expect(jsonData).to.have.property('code');",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "https://lookups.twilio.com/v2/PhoneNumbers/{{TEST_INVALID_NUMBER}}?Fields=line_type_intelligence",
+          "protocol": "https",
+          "host": ["lookups", "twilio", "com"],
+          "path": ["v2", "PhoneNumbers", "{{TEST_INVALID_NUMBER}}"],
+          "query": [
+            { "key": "Fields", "value": "line_type_intelligence" }
+          ]
+        },
+        "description": "Tests non-E.164 or unallocated number handling to validate Twilio error codes 21211 / 20404."
+      }
+    },
+    {
+      "name": "3. Messaging API - Send Outbound SMS via Sender ID / Short Code (201 Created)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Message accepted for delivery (201 Created)', function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "pm.test('Response includes Message SID and queued status', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData.sid).to.match(/^SM/);",
+              "    pm.expect(jsonData.status).to.be.oneOf(['queued', 'accepted', 'sending', 'sent']);",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/x-www-form-urlencoded" }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "To", "value": "{{TEST_VALID_E164}}", "type": "text" },
+            { "key": "From", "value": "{{TWILIO_FROM_NUMBER}}", "type": "text" },
+            { "key": "Body", "value": "Twilio Phone Ops Test: Porting & Sender ID verification active.", "type": "text" }
+          ]
+        },
+        "url": {
+          "raw": "https://api.twilio.com/2010-04-01/Accounts/{{TWILIO_ACCOUNT_SID}}/Messages.json",
+          "protocol": "https",
+          "host": ["api", "twilio", "com"],
+          "path": ["2010-04-01", "Accounts", "{{TWILIO_ACCOUNT_SID}}", "Messages.json"]
+        },
+        "description": "Dispatches an outbound SMS message via Twilio Programmable Messaging REST API."
+      }
+    },
+    {
+      "name": "4. IncomingPhoneNumbers - Audit Active & Ported Numbers (200 OK)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Response contains incoming_phone_numbers array', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData).to.have.property('incoming_phone_numbers');",
+              "    pm.expect(jsonData.incoming_phone_numbers).to.be.an('array');",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "https://api.twilio.com/2010-04-01/Accounts/{{TWILIO_ACCOUNT_SID}}/IncomingPhoneNumbers.json?PageSize=20",
+          "protocol": "https",
+          "host": ["api", "twilio", "com"],
+          "path": ["2010-04-01", "Accounts", "{{TWILIO_ACCOUNT_SID}}", "IncomingPhoneNumbers.json"],
+          "query": [
+            { "key": "PageSize", "value": "20" }
+          ]
+        },
+        "description": "Audits provisioned & ported phone numbers, SMS/Voice capability flags, and webhook URLs."
+      }
+    },
+    {
+      "name": "5. Message Logs - Inspect Undelivered Carrier Error Codes (30003/30005/30008)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200 OK', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "pm.test('Messages array parsed and error_code fields inspected', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData).to.have.property('messages');",
+              "    jsonData.messages.forEach(m => {",
+              "        if (m.status === 'undelivered' || m.status === 'failed') {",
+              "            pm.expect(m.error_code).to.not.be.null;",
+              "        }",
+              "    });",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Accept", "value": "application/json" }
+        ],
+        "url": {
+          "raw": "https://api.twilio.com/2010-04-01/Accounts/{{TWILIO_ACCOUNT_SID}}/Messages.json?PageSize=50",
+          "protocol": "https",
+          "host": ["api", "twilio", "com"],
+          "path": ["2010-04-01", "Accounts", "{{TWILIO_ACCOUNT_SID}}", "Messages.json"],
+          "query": [
+            { "key": "PageSize", "value": "50" }
+          ]
+        },
+        "description": "Retrieves recent message delivery logs to isolate carrier error codes (30003 Unreachable, 30005 Unknown Handset, 30008 Unknown Error)."
+      }
+    }
+  ]
+}
